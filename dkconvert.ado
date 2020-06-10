@@ -4,7 +4,7 @@ program define dkconvert
 version 16.1
 syntax varlist, [replace GENerate(namelist)] From(namelist) To(namelist) [assert]
 
-*** Check syntax input 
+*** Check syntax input
 * varlist
 confirm int variable `varlist'
 local varno = wordcount("`varlist'")
@@ -64,10 +64,9 @@ if _rc==111 {
 *** Load convert table as frame
 preserve
 tempfile converttable
-qui: findfile "MunicipalitiesToRegionsConvertTable.xls"
-qui: import excel using `"`r(fn)'"', clear first
-keep `from' `to' `to'_name 
-order `from' `to' `to'_name 
+qui: sysuse dkconvert_table.dta, clear
+keep `from' `to' `to'_name
+order `from' `to' `to'_name
 qui: duplicates drop
 rename `from' `varlist'
 qui: save `converttable', replace
