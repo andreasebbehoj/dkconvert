@@ -16,7 +16,8 @@ where _varlist_ is the municipalities codes ("kommunenumre") to be converted. _v
 
 ## Installation
 ```stata
-net install dkconvert, from("https://github.com/andreasebbehoj/dkconvert/edit/master/")
+net install github, from("https://haghish.github.io/github/")
+github install andreasebbehoj/dkconvert
 ```
 
 Program requires the _labutil_ package to work. Install by typing:
