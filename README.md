@@ -24,7 +24,7 @@ ssc install labutil
 ```
 
 ## Syntax
-**dkconvert** _varname_, {**generate**(_newvar_) | **replace**} **from**(oldkom|newkom) **to**(oldkom|newkom|county|region) [**assert**]
+**dkconvert** _varname_, {**generate**(_newvar_) | **replace**} **from**(oldkom|newkom) **to**(newkom|county|region) [**assert**]
 
 where _varlist_ is the municipalities codes ("kommunenumre") to be converted. _varname_ must be an integer.
 

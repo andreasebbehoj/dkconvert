@@ -9,7 +9,7 @@
 {title:Syntax}
 
 {p 8 17 2}
-{cmdab:wh:atever}
+{cmdab:dkconvert}
 {varname}
 {cmd:,} {it:assert}
 
@@ -17,12 +17,13 @@
 {synopthdr}
 {synoptline}
 {syntab:Main}
-{synopt:{opt f:rom}}display additional statistics{p_end}
-{synopt:{opt t:o}}suppress the display; calculate only the mean{p_end}
+{synopt:{opt f:rom}}converted from (oldkom|newkom) {p_end}
+{synopt:{opt t:o}}converted to (newkom|county|region) {p_end}
 {synopt:{opt f:ormat}}use variable's display format{p_end}
 {synopt:{opt sep:arator(#)}}draw separator line after every {it:#} variables;
         default is {cmd:separator(5)}{p_end}
-{synopt:{opth gen:erate(newvar)}}create variable name {it:newvar}{p_end}
+{syntab:Optional}
+{synopt:{opth gen:erate(newvar)}}create new variable with to()  {it:newvar}{p_end}
 {synoptline}
 {p2colreset}{...}
 
