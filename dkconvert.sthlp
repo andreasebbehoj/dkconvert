@@ -38,8 +38,11 @@
 
 {pstd}
 To update to newest version, type:
-{phang}{cmd:. github uninstall dkconvert}{p_end}
-{phang}{cmd:. github install andreasebbehoj/dkconvert}{p_end}
+{phang}
+{cmd:. github uninstall dkconvert}{p_end}
+{phang}
+{cmd:. github install andreasebbehoj/dkconvert}{p_end}
+{phang}
 For more details, see readme at https://github.com/andreasebbehoj/dkconvert
 
 {title:Examples}
