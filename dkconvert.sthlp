@@ -12,10 +12,10 @@
 {cmdab:dkconvert}
 {varname}
 {cmd:,}
-{cmdab:f:rom(oldkom|newkom)}
-{cmdab:t:o(newkom|county|region)}
-({opt:replace}|{cmdab:gen:erate(newvar))
-[{it:assert}]
+{cmdab:f:rom}(oldkom|newkom)
+{cmdab:t:o}(newkom|county|region)
+({cmd:replace}|{cmdab:gen:erate}(newvar)
+[{it:options}]
 
 {synoptset 20 tabbed}{...}
 {synopthdr}
@@ -25,12 +25,12 @@
 {synopt:{opt t:o}}converted to (newkom|county|region) {p_end}
 {synopt:*{opth gen:erate(newvar)}}creates  {it:newvar} containing the to() values and value labels {p_end}
 {synopt:*{opt replace}}replace {it:varname} with the to() values and value labels {p_end}
-{syntab:Optional}
+{syntab:Options}
 {synopt:{opt assert}}require all values in varname to match a valid code and terminates program if not {p_end}
 {synoptline}
 {p2colreset}{...}
 {p 4 6 2}
-* Either {cmd:replace} or {cmd:generate}() must be specified.{p_end}
+* Specify either {cmd:replace} or {cmd:generate}().{p_end}
 
 
 {title:Description}
