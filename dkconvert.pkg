@@ -1,5 +1,5 @@
 v 1.0.0
-d 'DKCONVERT':
+d 'DKCONVERT': Converting Danish municipality codes to counties or regions
 d
 d Convert old Danish municipality codes to new municipalities, counties, or regions
 d Distribution-Date 20200610
