@@ -1,5 +1,4 @@
 *! version 1.0.0 10jun2020
-capture: program drop dkconvert
 program define dkconvert
 version 16.1
 syntax varlist, [replace GENerate(namelist)] From(namelist) To(namelist) [assert]
