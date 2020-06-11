@@ -23,14 +23,14 @@
 {syntab:Main}
 {synopt:{opt f:rom}}converted from (oldkom|newkom) {p_end}
 {synopt:{opt t:o}}converted to (newkom|county|region) {p_end}
-{synopt:*{opth gen:erate(newvar)}}creates  {it:newvar} containing the to() values and value labels {p_end}
-{synopt:*{opt replace}}replace {it:varname} with the to() values and value labels {p_end}
+{p2coldent:* {opth gen:erate(newvar)}}creates  {it:newvar} containing the to() values and value labels {p_end}
+{p2coldent:* {opt replace}}replace {it:varname} with the to() values and value labels {p_end}
 {syntab:Optional}
 {synopt:{opt assert}}require all values in varname to match a valid code and terminates program if not {p_end}
 {synoptline}
 {p2colreset}{...}
 {p 4 6 2}
-* Specify either {cmd:replace} or {cmd:generate}().{p_end}
+* Only specify either {cmd:replace} or {cmd:generate}().{p_end}
 
 
 {title:Description}
