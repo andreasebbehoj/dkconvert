@@ -19,53 +19,27 @@
 {syntab:Main}
 {synopt:{opt f:rom}}converted from (oldkom|newkom) {p_end}
 {synopt:{opt t:o}}converted to (newkom|county|region) {p_end}
-{synopt:{opt f:ormat}}use variable's display format{p_end}
-{synopt:{opt sep:arator(#)}}draw separator line after every {it:#} variables;
-        default is {cmd:separator(5)}{p_end}
+{synopt:*{opth gen:erate(newvar)}}creates  {it:newvar} containing the to() values and value labels {p_end}
+{synopt:*{opt replace}}replace {it:varname} with the to() values and value labels {p_end}
+{synoptline}
 {syntab:Optional}
-{synopt:{opth gen:erate(newvar)}}create new variable with to()  {it:newvar}{p_end}
+{synopt:{opt assert}}require all values in varname to match a valid code and terminates program if not {p_end}
 {synoptline}
 {p2colreset}{...}
+{p 4 6 2}
+* Either {cmd:replace} or {cmd:generate}() must be specified.{p_end}
+
 
 {title:Description}
 
 {pstd}
-{cmd:dkconvert} converts c_kom to c_amt or c_region or from old (pre-2007) c_kom to new c_kom.
+{cmd:dkconvert} converts c_kom to c_amt or c_region or convert from old c_kom(pre-2007) to new c_kom. The program automatically labels resulting values.
 
-
-{title:Options}
-
-{dlgtab:Main}
-
-{phang}
-{opt detail} displays detailed output of the calculation.
-
-{phang}
-{opt meanonly} restricts the calculation to be based on only the means.  The
-default is to use a trimmed mean.
-
-{phang}
-{opt format} requests that the summary statistics be displayed using
-the display formats associated with the variables, rather than the default
-{cmd:g} display format; see
-{findalias frformats}.
-
-{phang}
-{opt separator(#)} specifies how often to insert separation lines
-into the output.  The default is {cmd:separator(5)}, meaning that a
-line is drawn after every 5 variables.  {cmd:separator(10)} would draw a line
-after every 10 variables.  {cmd:separator(0)} suppresses the separation line.
-
-{phang}
-{opth generate(newvar)} creates {it:newvar} containing the whatever
-values.
 
 {title:Remarks}
-For more details, see readme at https://github.com/andreasebbehoj/dkconvert
 
 {pstd}
-For detailed information on the whatever statistic, see
-{manlink R Intro}.
+For more details, see readme at https://github.com/andreasebbehoj/dkconvert
 
 
 {marker examples}{...}

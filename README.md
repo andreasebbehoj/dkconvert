@@ -24,13 +24,13 @@ ssc install labutil
 ```
 
 ## Syntax
-**dkconvert** _varname_, {**generate**(_newvar_) | **replace**} **from**(oldkom|newkom) **to**(newkom|county|region) [**assert**]
+**dkconvert** _varname_, **from**(oldkom|newkom) **to**(newkom|county|region) {**generate**(_newvar_) | **replace**} [**assert**]
 
-where _varlist_ is the municipalities codes ("kommunenumre") to be converted. _varname_ must be an integer.
+where _varname_ is the variable containing municipalities codes ("kommunenumre") to be converted (must be integer).
 
 ### Options
+* **from**(oldkom|newkom) is the type of _varname_ being converted. Can either be oldkom (municipality codes from before 2007) or newkom (municipalities after structural reform 2007)
+* **to**(newkom|county|region) is the resulting new municipality, county, or region code
 * **generate**(_newvar_) generate _newvar_ containing converted values
 * **replace** replace _varname_ with converted values
-* **from**(_old_) is the type of _varname_ being converted. Can either be oldkom (municipality codes from before 2007) or newkom (municipalities after structural reform 2007)
-* **to**(_new_) is the resulting municipality/county or region code
-* **assert** require all  values in _varlist_ to be match with a known municipality and terminates program if it does not.
+* **assert** (optional) require all values in _varname_ to match a valid code and terminates program if not.
