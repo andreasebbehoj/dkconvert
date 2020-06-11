@@ -52,7 +52,7 @@ copy "https://api.statbank.dk/v1/data/BEF1/CSV?lang=en&valuePresentation=Code&Ti
 
 {phang}{cmd:. rename område c_kom}{p_end}
 
-{pstd}
+
 Convert and replace old municipality codes with new codes:
 
 {phang}{cmd:. dkconvert c_kom, from(oldkom) to(newkom) replace assert}{p_end}
