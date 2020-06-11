@@ -100,5 +100,4 @@ else {
 	drop `to'_name
 }
 
-di "complete"
 end
