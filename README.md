@@ -12,17 +12,6 @@ The purpose of this Stata program is:
 
 Note: This is my first Stata package. Both package and documentation is still very much a work-in-progress. Comments and suggestions are more than welcome.
 
-## Installation
-```stata
-net install github, from("https://haghish.github.io/github/")
-github install andreasebbehoj/dkconvert
-```
-
-Program requires the _labutil_ package to work. Install by typing:
-```stata
-ssc install labutil
-```
-
 ## Syntax
 **dkconvert** _varname_, **from**(oldkom|newkom) **to**(newkom|county|region) {**generate**(_newvar_) | **replace**} [**assert**]
 
@@ -34,3 +23,25 @@ where _varname_ is the variable containing municipalities codes ("kommunenumre")
 * **generate**(_newvar_) generate _newvar_ containing converted values
 * **replace** replace _varname_ with converted values
 * **assert** (optional) require all values in _varname_ to match a valid code and terminates program if not.
+
+## Installation
+```stata
+net install github, from("https://haghish.github.io/github/")
+github install andreasebbehoj/dkconvert
+```
+
+Program requires the _labutil_ package to work. `github` should install automatically. If not, type:
+```stata
+ssc install labutil
+```
+
+## Update
+```stata
+github uninstall dkconvert
+github install andreasebbehoj/dkconvert
+```
+
+## Uninstall
+```stata
+github uninstall dkconvert
+```
