@@ -12,9 +12,9 @@
 {cmdab:dkconvert}
 {varname}
 {cmd:,}
-{opt:f:rom(oldkom|newkom)}
-{opt:t:o(newkom|county|region)}
-({opt:replace}|{opth:gen:erate(newvar))
+{cmdab:f:rom(oldkom|newkom)}
+{cmdab:t:o(newkom|county|region)}
+({opt:replace}|{cmdab:gen:erate(newvar))
 [{it:assert}]
 
 {synoptset 20 tabbed}{...}
