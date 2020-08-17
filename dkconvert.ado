@@ -14,7 +14,15 @@ if _rc==111 {
 
 *** Check syntax input
 * only one variable
-confirm int variable `varlist'
+capture: confirm int variable `varlist' 
+if _rc!=0 { // try to recast to int
+	recast int `varlist'
+	capture: confirm int variable `varlist' 
+	if _rc!=0 { // try to recast to int, and stop if unsuccesfull 
+		di as error "'varlist' found where int variable expected"
+		exit
+		}
+}
 
 * generate / replace
 if !mi("`generate'") {
