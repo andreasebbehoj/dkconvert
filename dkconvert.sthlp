@@ -1,42 +1,52 @@
 {smcl}
-{* *! version 1.0.0  10jun2020}{...}
+{* *! version 1.1.0  17aug2020}{...}
 {title:dkconvert}
 
 {phang}
-{bf:dkconvert} {hline 2} Convert Danish municipalities to regions/counties or from old to new municipalities
+{bf:dkconvert} {hline 2} Convert old Danish municipality codes (c_kom) from before the Structural Reform (Kommunalreformen) in 2007 to county (c_amt), region (c_reg) or new municipality codes, and add value labels.
 
 
 {title:Syntax}
 
+Convert municipality (old or new) to other geographic area (new municipality or region)
 {p 8 17 2}
 {cmdab:dkconvert}
 {varname}
 {cmd:,}
 {cmdab:f:rom}(oldkom|newkom)
 {cmdab:t:o}(newkom|county|region)
-({cmd:replace}|{cmdab:gen:erate}(newvar)
-[{it:options}]
+[{cmd:replace}|{cmdab:gen:erate}(newvar)]
+[{it:other options}]
+
+Only add value label to municipality, county, or region code without any conversion
+{p 8 17 2}
+{cmdab:dkconvert}
+{varname}
+{cmd:,}
+{cmdab:f:rom}(oldkom|newkom|county|region)
+{cmdab:l:abelonly}
+[{it:other options}]
 
 {synoptset 20 tabbed}{...}
 {synopthdr}
 {synoptline}
 {syntab:Main}
-{synopt:{opt f:rom}}converted from (oldkom|newkom) {p_end}
-{synopt:{opt t:o}}converted to (newkom|county|region) {p_end}
+{synopt:{opt f:rom}}type of varname to be converted from (oldkom|newkom) or add value label to (oldkom|newkom|region|county) {p_end}
+{synopt:{opt t:o}}convert to (newkom|county|region) {p_end}
 {p2coldent:* {opth gen:erate(newvar)}}creates  {it:newvar} containing the to() values and value labels {p_end}
 {p2coldent:* {opt replace}}replace {it:varname} with the to() values and value labels {p_end}
-{syntab:Optional}
+{syntab:Other options}
 {synopt:{opt assert}}require all values in varname to match a valid code and terminates program if not {p_end}
 {synoptline}
 {p2colreset}{...}
 {p 4 6 2}
-* Only specify either {cmd:replace} or {cmd:generate}().{p_end}
+* Only specify either {cmd:replace} or {cmd:generate}(). Do not work with the {cmd:labelonly} option.{p_end}
 
 
 {title:Description}
 
 {pstd}
-{cmd:dkconvert} can either converts c_kom to c_amt/c_region or convert old c_kom values (pre-2007) to new ones (after structural reform 2007). Results are automatically labeled.
+{cmd:dkconvert} can either 1) convert old (pre 2007) municipality codes (c_kom) to new municipality codes region codes (c_region), 2) convert new municipality codes (c_kom) to region codes (c_region), or 3) convert old c_kom values (pre-2007) to new ones (after structural reform 2007). Results are automatically labeled.
 
 {title:Remarks}
 

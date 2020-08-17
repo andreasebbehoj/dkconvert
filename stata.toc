@@ -1,4 +1,4 @@
-v 1.0.0
+v 1.1.0
 d dkconvert
 d by Andreas Ebbehoj
 d Aarhus University
@@ -6,6 +6,6 @@ d andebb@clin.au.dk
 d Find documentation at:
 l https://github.com/andreasebbehoj/dkconvert
 
-d 'dkconvert': convert old Danish municipality codes to new municipalities, counties, or regions
+d 'dkconvert': Convert old Danish municipality codes (c_kom) from before the Structural Reform (Kommunalreformen) in 2007 to county (c_amt), region (c_reg) or new municipality codes, and add value labels.
 
 p dkconvert
