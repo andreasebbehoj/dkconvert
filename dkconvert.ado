@@ -38,8 +38,8 @@ if mi("`replace'") & mi("`generate'") & mi("`labelonly'") {
 }
 
 * Confirm valid to/from options
-if inlist("`from'", "oldkom", "newkom")==0 {
-	di as error "Invalid from() option. Must be oldkom or newkom."
+if inlist("`from'", "oldkom", "newkom", "region", "county")==0 {
+	di as error "Invalid from() option. Must be oldkom, newkom, region, or county."
 	exit
 }
 if inlist("`to'", "newkom", "county", "region", "")==0 {
@@ -62,15 +62,15 @@ if "`to'"!="" {
 	confirm new var `to'
 
 	if inlist("`from'", "region") {
-		di as error "It is not possible to convert regions to municipalities or counties."
+		di as error "It is not possible to convert regions to `to'."
 		exit
 	}
 	if inlist("`from'", "county") {
-		di as error "It is not possible to convert counties to municipalities or regions."
+		di as error "It is not possible to convert counties to `to'."
 		exit
 	}
 	if "`from'"=="newkom" & inlist("`to'", "oldkom", "county") {
-		di as error "It is not possible to convert new municipalities back to the old municipalities or counties."
+		di as error "It is not possible to convert new municipalities to `to'."
 		exit
 	}
 	if "`from'"=="`to'" {
